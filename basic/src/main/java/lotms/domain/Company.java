@@ -31,10 +31,12 @@ public class Company {
 
     private String faxNumber;
 
+    @Embedded
     private Email email;
 
     private Integer marginRate;
 
+    @Embedded
     private Address address;
 
     private String addressDetails;
@@ -49,9 +51,11 @@ public class Company {
 
     private Boolean isActive;
 
-    private Address primaryDeliveryLocation;
+    @Embedded
+    private Address address;
 
-    private Address secondaryDeliveryLocation;
+    @Embedded
+    private Address address;
 
     private String salesRepresentative;
 

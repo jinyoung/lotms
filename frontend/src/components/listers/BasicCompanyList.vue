@@ -83,8 +83,8 @@
                             [ Beneficiary :  {{data.beneficiary }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PaymentTerms :  {{data.paymentTerms }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ IsActive :  {{data.isActive }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ PrimaryDeliveryLocation :  {{data.primaryDeliveryLocation }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ SecondaryDeliveryLocation :  {{data.secondaryDeliveryLocation }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ SalesRepresentative :  {{data.salesRepresentative }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CompanyIssues :  {{data.companyIssues }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
@@ -163,17 +163,17 @@
                 'ceoName': '',
                 'phone': '',
                 'faxNumber': '',
-                'email': '',
+                'email': {},
                 'marginRate': 0,
-                'address': '',
+                'address': {},
                 'addressDetails': '',
                 'accountNumber': '',
                 'bankName': '',
                 'beneficiary': '',
                 'paymentTerms': '',
                 'isActive': false,
-                'primaryDeliveryLocation': '',
-                'secondaryDeliveryLocation': '',
+                'address': {},
+                'address': {},
                 'salesRepresentative': '',
                 'companyIssues': '',
             }

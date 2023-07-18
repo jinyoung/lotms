@@ -17,7 +17,7 @@ public class User {
 
     private String id;
 
-    private Password password;
+    private String password;
 
     private String employmentStatus;
 

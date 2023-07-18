@@ -55,8 +55,8 @@
             <div>
                 <Boolean label="IsActive" v-model="item.isActive" :editMode="editMode" @change="change" />
             </div>
-            <Address offline label="PrimaryDeliveryLocation" v-model="item.primaryDeliveryLocation" :editMode="false" @change="change" />
-            <Address offline label="SecondaryDeliveryLocation" v-model="item.secondaryDeliveryLocation" :editMode="false" @change="change" />
+            <Address offline label="Address" v-model="item.address" :editMode="false" @change="change" />
+            <Address offline label="Address" v-model="item.address" :editMode="false" @change="change" />
             <div>
                 <String label="SalesRepresentative" v-model="item.salesRepresentative" :editMode="editMode" @change="change" />
             </div>

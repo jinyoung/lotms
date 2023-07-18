@@ -34,8 +34,8 @@
             <String label="예금주" v-model="value.beneficiary" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="결제조건" v-model="value.paymentTerms" :editMode="editMode" :inputUI="'TEXT'"/>
             <Boolean label="사용여부" v-model="value.isActive" :editMode="editMode" :inputUI="'SELECT'"/>
-            <Address offline label="주 납품처" v-model="value.primaryDeliveryLocation" :editMode="editMode" @change="change"/>
-            <Address offline label="보조 납품처" v-model="value.secondaryDeliveryLocation" :editMode="editMode" @change="change"/>
+            <Address offline label="주 납품처" v-model="value.address" :editMode="editMode" @change="change"/>
+            <Address offline label="보조 납품처" v-model="value.address" :editMode="editMode" @change="change"/>
             <String label="영업 담당자" v-model="value.salesRepresentative" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="업체 이슈" v-model="value.companyIssues" :editMode="editMode" :inputUI="'TEXT'"/>
         </v-card-text>

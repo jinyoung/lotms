@@ -17,7 +17,7 @@
 
         <v-card-text>
             <String label="사용자명" v-model="value.userName" :editMode="editMode" :inputUI="'TEXT'"/>
-            <Password offline label="비밀번호" v-model="value.password" :editMode="editMode" @change="change"/>
+            <String label="비밀번호" v-model="value.password" :editMode="editMode" :inputUI="''"/>
             <String label="재직여부" v-model="value.employmentStatus" :editMode="editMode" :inputUI="'SELECT'"/>
             <String label="직책" v-model="value.position" :editMode="editMode" :inputUI="'SELECT'"/>
             <String label="부서" v-model="value.department" :editMode="editMode" :inputUI="'TEXT'"/>

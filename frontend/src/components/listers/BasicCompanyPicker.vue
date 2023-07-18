@@ -69,10 +69,10 @@
                                 IsActive :  {{item.isActive }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                PrimaryDeliveryLocation :  {{item.primaryDeliveryLocation }}
+                                Address :  {{item.address }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                SecondaryDeliveryLocation :  {{item.secondaryDeliveryLocation }}
+                                Address :  {{item.address }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 SalesRepresentative :  {{item.salesRepresentative }}

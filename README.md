@@ -34,7 +34,7 @@ mvn spring-boot:run
 - basic
 ```
  http :8088/users userName="userName" id="id" password="password" employmentStatus="employmentStatus" position="position" department="department" phoneNumber="phoneNumber" joinDate="joinDate" isAdmin="isAdmin" isDeptManager="isDeptManager" 
- http :8088/companies companyType="companyType" companyName="companyName" companyCode="companyCode" registrationNumber="registrationNumber" businessType="businessType" industry="industry" ceoName="ceoName" phone="phone" faxNumber="faxNumber" email="email" marginRate="marginRate" address="address" addressDetails="addressDetails" accountNumber="accountNumber" bankName="bankName" beneficiary="beneficiary" paymentTerms="paymentTerms" isActive="isActive" primaryDeliveryLocation="primaryDeliveryLocation" secondaryDeliveryLocation="secondaryDeliveryLocation" salesRepresentative="salesRepresentative" companyIssues="companyIssues" 
+ http :8088/companies companyType="companyType" companyName="companyName" companyCode="companyCode" registrationNumber="registrationNumber" businessType="businessType" industry="industry" ceoName="ceoName" phone="phone" faxNumber="faxNumber" email="email" marginRate="marginRate" address="address" addressDetails="addressDetails" accountNumber="accountNumber" bankName="bankName" beneficiary="beneficiary" paymentTerms="paymentTerms" isActive="isActive" address="address" address="address" salesRepresentative="salesRepresentative" companyIssues="companyIssues" 
 ```
 - sales
 ```

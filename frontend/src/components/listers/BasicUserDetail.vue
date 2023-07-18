@@ -8,7 +8,9 @@
             <div>
                 <String label="UserName" v-model="item.userName" :editMode="editMode" @change="change" />
             </div>
-            <Password offline label="Password" v-model="item.password" :editMode="false" :key="false" @change="change" />
+            <div>
+                <String label="Password" v-model="item.password" :editMode="editMode" @change="change" />
+            </div>
             <div>
                 <String label="EmploymentStatus" v-model="item.employmentStatus" :editMode="editMode" @change="change" />
             </div>
