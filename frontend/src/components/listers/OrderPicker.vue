@@ -3,48 +3,48 @@
         <v-list two-line v-if="list.length > 0">
             <v-list-item-group 
                     v-model="selected" 
-                    color="primary"
+                    color="indigo"
                     @change="select"
             >
                 <v-list-item v-for="(item, idx) in list" :key="idx">
                     <template v-slot:default="{ active }">
-                        <v-list-item-avatar color="primary-darker-1">
+                        <v-list-item-avatar color="grey darken-1">
                         </v-list-item-avatar>
                         
                         <v-list-item-content>
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                UserName :  {{item.userName }}
+                                OrderId :  {{item.orderId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Password :  {{item.password }}
+                                OrderType :  {{item.orderType }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                EmploymentStatus :  {{item.employmentStatus }}
+                                Customer :  {{item.customer }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Position :  {{item.position }}
+                                OrderDate :  {{item.orderDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Department :  {{item.department }}
+                                DeliveryDate :  {{item.deliveryDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                PhoneNumber :  {{item.phoneNumber }}
+                                OrderManager :  {{item.orderManager }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                JoinDate :  {{item.joinDate }}
+                                AccountingYearMonth :  {{item.accountingYearMonth }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                IsAdmin :  {{item.isAdmin }}
+                                RegisteredBy :  {{item.registeredBy }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                IsDeptManager :  {{item.isDeptManager }}
+                                Memo :  {{item.memo }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
-                            <v-checkbox :input-value="active" color="primary-darker-1"></v-checkbox>
+                            <v-checkbox :input-value="active" color="indigo"></v-checkbox>
                         </v-list-item-action>
                     </template>
                 </v-list-item>
@@ -58,7 +58,7 @@
     const axios = require('axios').default;
 
     export default {
-        name: 'BasicUserPicker',
+        name: 'OrderPicker',
         props: {
             value: [String, Object, Array, Number, Boolean],
         },
@@ -68,14 +68,14 @@
         }),
         async created() {
             var me = this;
-            var temp = await axios.get(axios.fixUrl('/users'))
+            var temp = await axios.get(axios.fixUrl('/orders'))
             if(temp.data) {
-                me.list = temp.data._embedded.users;
+                me.list = temp.data._embedded.orders;
             }
 
             if(me.value && typeof me.value == "object" && Object.values(me.value)[0]) {
                 var id = Object.values(me.value)[0];
-                var tmpValue = await axios.get(axios.fixUrl('/users/' + id))
+                var tmpValue = await axios.get(axios.fixUrl('/orders/' + id))
                 if(tmpValue.data) {
                     var val = tmpValue.data
                     me.list.forEach(function(item, idx) {
@@ -91,9 +91,7 @@
                 var obj = {}
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
-                    obj['userName'] = arr[4]; 
-                    
-                    
+                    obj['orderId'] = arr[4]; 
                     
                     
                     

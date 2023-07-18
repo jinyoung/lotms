@@ -5,13 +5,13 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import BasicUserManager from "./components/listers/BasicUserCards"
-import BasicUserDetail from "./components/listers/BasicUserDetail"
-import BasicCompanyManager from "./components/listers/BasicCompanyCards"
-import BasicCompanyDetail from "./components/listers/BasicCompanyDetail"
+import UserManager from "./components/listers/UserCards"
+import UserDetail from "./components/listers/UserDetail"
+import CompanyManager from "./components/listers/CompanyCards"
+import CompanyDetail from "./components/listers/CompanyDetail"
 
-import SalesOrderManager from "./components/listers/SalesOrderCards"
-import SalesOrderDetail from "./components/listers/SalesOrderDetail"
+import OrderManager from "./components/listers/OrderCards"
+import OrderDetail from "./components/listers/OrderDetail"
 
 
 export default new Router({
@@ -19,35 +19,35 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
             {
-                path: '/basics/users',
-                name: 'BasicUserManager',
-                component: BasicUserManager
+                path: '/users',
+                name: 'UserManager',
+                component: UserManager
             },
             {
-                path: '/basics/users/:id',
-                name: 'BasicUserDetail',
-                component: BasicUserDetail
+                path: '/users/:id',
+                name: 'UserDetail',
+                component: UserDetail
             },
             {
-                path: '/basics/companies',
-                name: 'BasicCompanyManager',
-                component: BasicCompanyManager
+                path: '/companies',
+                name: 'CompanyManager',
+                component: CompanyManager
             },
             {
-                path: '/basics/companies/:id',
-                name: 'BasicCompanyDetail',
-                component: BasicCompanyDetail
+                path: '/companies/:id',
+                name: 'CompanyDetail',
+                component: CompanyDetail
             },
 
             {
-                path: '/sales/orders',
-                name: 'SalesOrderManager',
-                component: SalesOrderManager
+                path: '/orders',
+                name: 'OrderManager',
+                component: OrderManager
             },
             {
-                path: '/sales/orders/:id',
-                name: 'SalesOrderDetail',
-                component: SalesOrderDetail
+                path: '/orders/:id',
+                name: 'OrderDetail',
+                component: OrderDetail
             },
 
 

@@ -5,7 +5,6 @@ import vuetify from "./plugins/vuetify";
 import Managing from "./components";
 import router from './router';
 Vue.config.productionTip = false;
-require('./GlobalStyle.css');
 
 const axios = require("axios").default;
 
@@ -45,10 +44,10 @@ templateFiles.keys().forEach(function(tempFiles) {
 Vue.use(Managing);
 const pluralCaseList = []
 
-pluralCaseList.push( {plural: "basics/users", pascal: "BasicUser"} )
-pluralCaseList.push( {plural: "basics/companies", pascal: "BasicCompany"} )
+pluralCaseList.push( {plural: "users", pascal: "User"} )
+pluralCaseList.push( {plural: "companies", pascal: "Company"} )
 
-pluralCaseList.push( {plural: "sales/orders", pascal: "SalesOrder"} )
+pluralCaseList.push( {plural: "orders", pascal: "Order"} )
 
 
 Vue.prototype.$ManagerLists.forEach(function(item, idx) {

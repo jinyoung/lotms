@@ -3,78 +3,48 @@
         <v-list two-line v-if="list.length > 0">
             <v-list-item-group 
                     v-model="selected" 
-                    color="primary"
+                    color="indigo"
                     @change="select"
             >
                 <v-list-item v-for="(item, idx) in list" :key="idx">
                     <template v-slot:default="{ active }">
-                        <v-list-item-avatar color="primary-darker-1">
+                        <v-list-item-avatar color="grey darken-1">
                         </v-list-item-avatar>
                         
                         <v-list-item-content>
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                CompanyType :  {{item.companyType }}
+                                UserName :  {{item.userName }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                CompanyName :  {{item.companyName }}
+                                Password :  {{item.password }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                CompanyCode :  {{item.companyCode }}
+                                EmploymentStatus :  {{item.employmentStatus }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                RegistrationNumber :  {{item.registrationNumber }}
+                                Position :  {{item.position }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                BusinessType :  {{item.businessType }}
+                                Department :  {{item.department }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Industry :  {{item.industry }}
+                                PhoneNumber :  {{item.phoneNumber }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                CeoName :  {{item.ceoName }}
+                                JoinDate :  {{item.joinDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Phone :  {{item.phone }}
+                                IsAdmin :  {{item.isAdmin }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                FaxNumber :  {{item.faxNumber }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                Email :  {{item.email }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                MarginRate :  {{item.marginRate }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                AccountNumber :  {{item.accountNumber }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                BankName :  {{item.bankName }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                Beneficiary :  {{item.beneficiary }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                PaymentTerms :  {{item.paymentTerms }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                IsActive :  {{item.isActive }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                SalesRepresentative :  {{item.salesRepresentative }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                CompanyIssues :  {{item.companyIssues }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                Address :  {{item.address }}
+                                IsDeptManager :  {{item.isDeptManager }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
-                            <v-checkbox :input-value="active" color="primary-darker-1"></v-checkbox>
+                            <v-checkbox :input-value="active" color="indigo"></v-checkbox>
                         </v-list-item-action>
                     </template>
                 </v-list-item>
@@ -88,7 +58,7 @@
     const axios = require('axios').default;
 
     export default {
-        name: 'BasicCompanyPicker',
+        name: 'UserPicker',
         props: {
             value: [String, Object, Array, Number, Boolean],
         },
@@ -98,14 +68,14 @@
         }),
         async created() {
             var me = this;
-            var temp = await axios.get(axios.fixUrl('/companies'))
+            var temp = await axios.get(axios.fixUrl('/users'))
             if(temp.data) {
-                me.list = temp.data._embedded.companies;
+                me.list = temp.data._embedded.users;
             }
 
             if(me.value && typeof me.value == "object" && Object.values(me.value)[0]) {
                 var id = Object.values(me.value)[0];
-                var tmpValue = await axios.get(axios.fixUrl('/companies/' + id))
+                var tmpValue = await axios.get(axios.fixUrl('/users/' + id))
                 if(tmpValue.data) {
                     var val = tmpValue.data
                     me.list.forEach(function(item, idx) {
@@ -121,25 +91,7 @@
                 var obj = {}
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
-                    
-                    
-                    
-                    
-                    obj['companyCode'] = arr[4]; 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                    obj['userName'] = arr[4]; 
                     
                     
                     
