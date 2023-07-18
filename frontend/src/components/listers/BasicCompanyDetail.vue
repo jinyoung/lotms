@@ -36,10 +36,6 @@
             <div>
                 <Number label="MarginRate" v-model="item.marginRate" :editMode="editMode" @change="change" />
             </div>
-            <Address offline label="Address" v-model="item.address" :editMode="false" @change="change" />
-            <div>
-                <String label="AddressDetails" v-model="item.addressDetails" :editMode="editMode" @change="change" />
-            </div>
             <div>
                 <String label="AccountNumber" v-model="item.accountNumber" :editMode="editMode" @change="change" />
             </div>
@@ -55,14 +51,13 @@
             <div>
                 <Boolean label="IsActive" v-model="item.isActive" :editMode="editMode" @change="change" />
             </div>
-            <Address offline label="Address" v-model="item.address" :editMode="false" @change="change" />
-            <Address offline label="Address" v-model="item.address" :editMode="false" @change="change" />
             <div>
                 <String label="SalesRepresentative" v-model="item.salesRepresentative" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="CompanyIssues" v-model="item.companyIssues" :editMode="editMode" @change="change" />
             </div>
+            <Address offline label="Address" v-model="item.address" :editMode="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

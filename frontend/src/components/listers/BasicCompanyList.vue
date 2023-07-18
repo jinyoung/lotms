@@ -59,9 +59,6 @@
                             
                             
                             
-                            
-                            
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -76,17 +73,14 @@
                             [ FaxNumber :  {{data.faxNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Email :  {{data.email }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MarginRate :  {{data.marginRate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ AddressDetails :  {{data.addressDetails }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ AccountNumber :  {{data.accountNumber }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ BankName :  {{data.bankName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Beneficiary :  {{data.beneficiary }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PaymentTerms :  {{data.paymentTerms }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ IsActive :  {{data.isActive }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ SalesRepresentative :  {{data.salesRepresentative }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CompanyIssues :  {{data.companyIssues }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -165,17 +159,14 @@
                 'faxNumber': '',
                 'email': {},
                 'marginRate': 0,
-                'address': {},
-                'addressDetails': '',
                 'accountNumber': '',
                 'bankName': '',
                 'beneficiary': '',
                 'paymentTerms': '',
                 'isActive': false,
-                'address': {},
-                'address': {},
                 'salesRepresentative': '',
                 'companyIssues': '',
+                'address': {},
             }
         },
         methods: {

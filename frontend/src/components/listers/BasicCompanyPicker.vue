@@ -48,12 +48,6 @@
                                 MarginRate :  {{item.marginRate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Address :  {{item.address }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                AddressDetails :  {{item.addressDetails }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 AccountNumber :  {{item.accountNumber }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
@@ -69,16 +63,13 @@
                                 IsActive :  {{item.isActive }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Address :  {{item.address }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                Address :  {{item.address }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 SalesRepresentative :  {{item.salesRepresentative }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 CompanyIssues :  {{item.companyIssues }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                Address :  {{item.address }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -135,12 +126,6 @@
                     
                     
                     obj['companyCode'] = arr[4]; 
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     
                     

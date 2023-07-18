@@ -36,11 +36,6 @@ public class Company {
 
     private Integer marginRate;
 
-    @Embedded
-    private Address address;
-
-    private String addressDetails;
-
     private String accountNumber;
 
     private String bankName;
@@ -51,15 +46,12 @@ public class Company {
 
     private Boolean isActive;
 
-    @Embedded
-    private Address address;
-
-    @Embedded
-    private Address address;
-
     private String salesRepresentative;
 
     private String companyIssues;
+
+    @Embedded
+    private Address address;
 
     public static CompanyRepository repository() {
         CompanyRepository companyRepository = BasicApplication.applicationContext.getBean(

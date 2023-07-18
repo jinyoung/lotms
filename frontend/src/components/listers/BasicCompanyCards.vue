@@ -121,17 +121,14 @@
                 'faxNumber': '',
                 'email': {},
                 'marginRate': 0,
-                'address': {},
-                'addressDetails': '',
                 'accountNumber': '',
                 'bankName': '',
                 'beneficiary': '',
                 'paymentTerms': '',
                 'isActive': false,
-                'address': {},
-                'address': {},
                 'salesRepresentative': '',
                 'companyIssues': '',
+                'address': {},
             }
         },
         methods:{

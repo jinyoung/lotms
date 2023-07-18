@@ -61,7 +61,7 @@
 </template>
 
 <script>
-    import Email from '../vo/Email.vue';
+    import Email from '../Email.vue';
 
     export default {
         name: 'EmailManager',

@@ -27,17 +27,14 @@
             <String label="업체 팩스번호" v-model="value.faxNumber" :editMode="editMode" :inputUI="'TEXT'"/>
             <Email offline label="이메일주소" v-model="value.email" :editMode="editMode" @change="change"/>
             <Number label="마진율(%)" v-model="value.marginRate" :editMode="editMode" :inputUI="'TEXT'"/>
-            <Address offline label="주소" v-model="value.address" :editMode="editMode" @change="change"/>
-            <String label="주소상세" v-model="value.addressDetails" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="계좌번호" v-model="value.accountNumber" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="은행명" v-model="value.bankName" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="예금주" v-model="value.beneficiary" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="결제조건" v-model="value.paymentTerms" :editMode="editMode" :inputUI="'TEXT'"/>
             <Boolean label="사용여부" v-model="value.isActive" :editMode="editMode" :inputUI="'SELECT'"/>
-            <Address offline label="주 납품처" v-model="value.address" :editMode="editMode" @change="change"/>
-            <Address offline label="보조 납품처" v-model="value.address" :editMode="editMode" @change="change"/>
             <String label="영업 담당자" v-model="value.salesRepresentative" :editMode="editMode" :inputUI="'TEXT'"/>
             <String label="업체 이슈" v-model="value.companyIssues" :editMode="editMode" :inputUI="'TEXT'"/>
+            <Address offline label="주소" v-model="value.address" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -100,15 +97,11 @@
 
     import Email from './vo/Email.vue';
     import Address from './vo/Address.vue';
-    import Address from './vo/Address.vue';
-    import Address from './vo/Address.vue';
 
     export default {
         name: 'BasicCompany',
         components:{
             Email,
-            Address,
-            Address,
             Address,
         },
         props: {

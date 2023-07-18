@@ -63,7 +63,7 @@
 </template>
 
 <script>
-    import Address from '../vo/Address.vue';
+    import Address from '../Address.vue';
 
     export default {
         name: 'AddressManager',
